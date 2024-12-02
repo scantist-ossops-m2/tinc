@@ -282,6 +282,9 @@ void receive_tcppacket(connection_t *c, char *buffer, int len)
 	if(len > sizeof outpkt.data)
 		return;
 
+	if(len > sizeof outpkt.data)
+		return;
+
 	outpkt.len = len;
 	memcpy(outpkt.data, buffer, len);
 
