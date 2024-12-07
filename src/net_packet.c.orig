@@ -420,9 +420,6 @@ void receive_tcppacket(connection_t *c, const char *buffer, length_t len) {
 		return;
 	}
 
-	if(len > sizeof outpkt.data)
-		return;
-
 	outpkt.len = len;
 
 	if(c->options & OPTION_TCPONLY) {
